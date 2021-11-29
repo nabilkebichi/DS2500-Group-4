@@ -45,4 +45,4 @@ for col in used_car_df:
     col_list.append(col)
 
 print(col_list)
-print(used_car_df.head())
+print(used_car_df.head(),used_car_df.shape)
