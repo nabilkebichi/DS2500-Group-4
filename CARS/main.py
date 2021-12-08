@@ -122,3 +122,6 @@ plt.show()
 # the produced model, working to create a model that was both graphically and statistically relevant
 arma_rmse = np.sqrt(mean_squared_error(test["Chargepoints"].values, y_pred_df["Predictions"]))
 print("RMSE: ", arma_rmse)
+
+# This will create index warnings however the code runs smoothly. It is simply from the adaptations I made from the
+# source.  Our data is formatted quite differently and the source doesn't have groups or summarized data. Thanks!
