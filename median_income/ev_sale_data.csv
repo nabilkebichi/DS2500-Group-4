@@ -1,0 +1,496 @@
+﻿Model,Count,Year,Type
+Chevy Volt,7671,2011,PHEV
+Nissan Leaf,9674,2011,EV
+Smart ED,342,2011,EV
+Mitsubishi I EV,76,2011,EV
+BMW Active E,0,2011,EV
+Prius PHEV,0,2011,PHEV
+Ford Focus EV,0,2011,EV
+Honda Fit EV,0,2011,EV
+Tesla Model S,0,2011,EV
+Toyota RAV4 EV,0,2011,EV
+Ford C-Max Energi,0,2011,PHEV
+Honda Accord,0,2011,PHEV
+Ford Fusion Energi,0,2011,PHEV
+Chevy Spark,0,2011,EV
+Fiat 500E,0,2011,EV
+Porsche Panamera S E-Hybrid,0,2011,PHEV
+Cadillac ELR,0,2011,PHEV
+BMW i3,0,2011,EV
+Mercedes B-Class (B250e),0,2011,EV
+BMW i8,0,2011,PHEV
+VW e-Golf,0,2011,EV
+Kia Soul EV,0,2011,EV
+Porsche Cayenne S E-Hybrid,0,2011,PHEV
+Mercedes S550 Plug,0,2011,PHEV
+Volvo-XC90 Plug In,0,2011,PHEV
+Tesla Model X,0,2011,EV
+BMW X5,0,2011,PHEV
+Hyundai Sonata Plug In,0,2011,PHEV
+Audi A3 Plug In,0,2011,PHEV
+BMW 3-series Plug-In,0,2011,PHEV
+Mercedes GLE 550e,0,2011,PHEV
+BMW 7-series Plug-in,0,2011,PHEV
+Mercedes C350We,0,2011,PHEV
+Chevy Bolt,0,2011,EV
+Kia Optima Plug-in,0,2011,PHEV
+Hyundai Ioniq EV,0,2011,EV
+Chrysler Pacifica Plug-in Hybrid,0,2011,PHEV
+Cadillac CT6,0,2011,PHEV
+BMW 5-Series Plug in,0,2011,PHEV
+MINI Countryman S E,0,2011,PHEV
+Porsche Panamera 4 E-H,0,2011,PHEV
+Tesla Model 3,0,2011,EV
+Honda Clarity BEV,0,2011,EV
+Volvo XC60 Plug In,0,2011,PHEV
+Volvo S90 Plug In,0,2011,PHEV
+Honda Clarity Plug-in,0,2011,PHEV
+Mitsubishi Outlander Plug In,0,2011,PHEV
+Hyundai Ioniq Plug-In,0,2011,PHEV
+Kia Niro Plug In,0,2011,PHEV
+Mercedes GLC 350e Hybrid,0,2011,PHEV
+Jaguar I-Pace,0,2011,EV
+Hyundai Kona Electric,0,2011,EV
+Subaru Crosstrek Hybrid,0,2011,PHEV
+Audi e-tron,0,2011,EV
+Kia Niro EV,0,2011,EV
+Chevy Volt,23461,2012,PHEV
+Nissan Leaf,9819,2012,EV
+Smart ED,139,2012,EV
+Mitsubishi I EV,588,2012,EV
+BMW Active E,673,2012,EV
+Prius PHEV,12749,2012,PHEV
+Ford Focus EV,683,2012,EV
+Honda Fit EV,93,2012,EV
+Tesla Model S,2400,2012,EV
+Toyota RAV4 EV,192,2012,EV
+Ford C-Max Energi,2374,2012,PHEV
+Honda Accord,0,2012,PHEV
+Ford Fusion Energi,0,2012,PHEV
+Chevy Spark,0,2012,EV
+Fiat 500E,0,2012,EV
+Porsche Panamera S E-Hybrid,0,2012,PHEV
+Cadillac ELR,0,2012,PHEV
+BMW i3,0,2012,EV
+Mercedes B-Class (B250e),0,2012,EV
+BMW i8,0,2012,PHEV
+VW e-Golf,0,2012,EV
+Kia Soul EV,0,2012,EV
+Porsche Cayenne S E-Hybrid,0,2012,PHEV
+Mercedes S550 Plug,0,2012,PHEV
+Volvo-XC90 Plug In,0,2012,PHEV
+Tesla Model X,0,2012,EV
+BMW X5,0,2012,PHEV
+Hyundai Sonata Plug In,0,2012,PHEV
+Audi A3 Plug In,0,2012,PHEV
+BMW 3-series Plug-In,0,2012,PHEV
+Mercedes GLE 550e,0,2012,PHEV
+BMW 7-series Plug-in,0,2012,PHEV
+Mercedes C350We,0,2012,PHEV
+Chevy Bolt,0,2012,EV
+Kia Optima Plug-in,0,2012,PHEV
+Hyundai Ioniq EV,0,2012,EV
+Chrysler Pacifica Plug-in Hybrid,0,2012,PHEV
+Cadillac CT6,0,2012,PHEV
+BMW 5-Series Plug in,0,2012,PHEV
+MINI Countryman S E,0,2012,PHEV
+Porsche Panamera 4 E-H,0,2012,PHEV
+Tesla Model 3,0,2012,EV
+Honda Clarity BEV,0,2012,EV
+Volvo XC60 Plug In,0,2012,PHEV
+Volvo S90 Plug In,0,2012,PHEV
+Honda Clarity Plug-in,0,2012,PHEV
+Mitsubishi Outlander Plug In,0,2012,PHEV
+Hyundai Ioniq Plug-In,0,2012,PHEV
+Kia Niro Plug In,0,2012,PHEV
+Mercedes GLC 350e Hybrid,0,2012,PHEV
+Jaguar I-Pace,0,2012,EV
+Hyundai Kona Electric,0,2012,EV
+Subaru Crosstrek Hybrid,0,2012,PHEV
+Audi e-tron,0,2012,EV
+Kia Niro EV,0,2012,EV
+Chevy Volt,23094,2013,PHEV
+Nissan Leaf,22610,2013,EV
+Smart ED,923,2013,EV
+Mitsubishi I EV,1029,2013,EV
+BMW Active E,0,2013,EV
+Prius PHEV,12088,2013,PHEV
+Ford Focus EV,1738,2013,EV
+Honda Fit EV,569,2013,EV
+Tesla Model S,19400,2013,EV
+Toyota RAV4 EV,1005,2013,EV
+Ford C-Max Energi,7154,2013,PHEV
+Honda Accord,526,2013,PHEV
+Ford Fusion Energi,6089,2013,PHEV
+Chevy Spark,560,2013,EV
+Fiat 500E,260,2013,EV
+Porsche Panamera S E-Hybrid,51,2013,PHEV
+Cadillac ELR,6,2013,PHEV
+BMW i3,0,2013,EV
+Mercedes B-Class (B250e),0,2013,EV
+BMW i8,0,2013,PHEV
+VW e-Golf,0,2013,EV
+Kia Soul EV,0,2013,EV
+Porsche Cayenne S E-Hybrid,0,2013,PHEV
+Mercedes S550 Plug,0,2013,PHEV
+Volvo-XC90 Plug In,0,2013,PHEV
+Tesla Model X,0,2013,EV
+BMW X5,0,2013,PHEV
+Hyundai Sonata Plug In,0,2013,PHEV
+Audi A3 Plug In,0,2013,PHEV
+BMW 3-series Plug-In,0,2013,PHEV
+Mercedes GLE 550e,0,2013,PHEV
+BMW 7-series Plug-in,0,2013,PHEV
+Mercedes C350We,0,2013,PHEV
+Chevy Bolt,0,2013,EV
+Kia Optima Plug-in,0,2013,PHEV
+Hyundai Ioniq EV,0,2013,EV
+Chrysler Pacifica Plug-in Hybrid,0,2013,PHEV
+Cadillac CT6,0,2013,PHEV
+BMW 5-Series Plug in,0,2013,PHEV
+MINI Countryman S E,0,2013,PHEV
+Porsche Panamera 4 E-H,0,2013,PHEV
+Tesla Model 3,0,2013,EV
+Honda Clarity BEV,0,2013,EV
+Volvo XC60 Plug In,0,2013,PHEV
+Volvo S90 Plug In,0,2013,PHEV
+Honda Clarity Plug-in,0,2013,PHEV
+Mitsubishi Outlander Plug In,0,2013,PHEV
+Hyundai Ioniq Plug-In,0,2013,PHEV
+Kia Niro Plug In,0,2013,PHEV
+Mercedes GLC 350e Hybrid,0,2013,PHEV
+Jaguar I-Pace,0,2013,EV
+Hyundai Kona Electric,0,2013,EV
+Subaru Crosstrek Hybrid,0,2013,PHEV
+Audi e-tron,0,2013,EV
+Kia Niro EV,0,2013,EV
+Chevy Volt,18805,2014,PHEV
+Nissan Leaf,30200,2014,EV
+Smart ED,2594,2014,EV
+Mitsubishi I EV,196,2014,EV
+BMW Active E,0,2014,EV
+Prius PHEV,13264,2014,PHEV
+Ford Focus EV,1964,2014,EV
+Honda Fit EV,407,2014,EV
+Tesla Model S,16750,2014,EV
+Toyota RAV4 EV,1184,2014,EV
+Ford C-Max Energi,8433,2014,PHEV
+Honda Accord,449,2014,PHEV
+Ford Fusion Energi,11550,2014,PHEV
+Chevy Spark,1145,2014,EV
+Fiat 500E,1503,2014,EV
+Porsche Panamera S E-Hybrid,879,2014,PHEV
+Cadillac ELR,1310,2014,PHEV
+BMW i3,6092,2014,EV
+Mercedes B-Class (B250e),774,2014,EV
+BMW i8,555,2014,PHEV
+VW e-Golf,357,2014,EV
+Kia Soul EV,359,2014,EV
+Porsche Cayenne S E-Hybrid,112,2014,PHEV
+Mercedes S550 Plug,0,2014,PHEV
+Volvo-XC90 Plug In,0,2014,PHEV
+Tesla Model X,0,2014,EV
+BMW X5,0,2014,PHEV
+Hyundai Sonata Plug In,0,2014,PHEV
+Audi A3 Plug In,0,2014,PHEV
+BMW 3-series Plug-In,0,2014,PHEV
+Mercedes GLE 550e,0,2014,PHEV
+BMW 7-series Plug-in,0,2014,PHEV
+Mercedes C350We,0,2014,PHEV
+Chevy Bolt,0,2014,EV
+Kia Optima Plug-in,0,2014,PHEV
+Hyundai Ioniq EV,0,2014,EV
+Chrysler Pacifica Plug-in Hybrid,0,2014,PHEV
+Cadillac CT6,0,2014,PHEV
+BMW 5-Series Plug in,0,2014,PHEV
+MINI Countryman S E,0,2014,PHEV
+Porsche Panamera 4 E-H,0,2014,PHEV
+Tesla Model 3,0,2014,EV
+Honda Clarity BEV,0,2014,EV
+Volvo XC60 Plug In,0,2014,PHEV
+Volvo S90 Plug In,0,2014,PHEV
+Honda Clarity Plug-in,0,2014,PHEV
+Mitsubishi Outlander Plug In,0,2014,PHEV
+Hyundai Ioniq Plug-In,0,2014,PHEV
+Kia Niro Plug In,0,2014,PHEV
+Mercedes GLC 350e Hybrid,0,2014,PHEV
+Jaguar I-Pace,0,2014,EV
+Hyundai Kona Electric,0,2014,EV
+Subaru Crosstrek Hybrid,0,2014,PHEV
+Audi e-tron,0,2014,EV
+Kia Niro EV,0,2014,EV
+Chevy Volt,15393,2015,PHEV
+Nissan Leaf,17269,2015,EV
+Smart ED,1387,2015,EV
+Mitsubishi I EV,115,2015,EV
+BMW Active E,0,2015,EV
+Prius PHEV,4191,2015,PHEV
+Ford Focus EV,1582,2015,EV
+Honda Fit EV,2,2015,EV
+Tesla Model S,26200,2015,EV
+Toyota RAV4 EV,18,2015,EV
+Ford C-Max Energi,7591,2015,PHEV
+Honda Accord,64,2015,PHEV
+Ford Fusion Energi,9750,2015,PHEV
+Chevy Spark,2629,2015,EV
+Fiat 500E,3477,2015,EV
+Porsche Panamera S E-Hybrid,407,2015,PHEV
+Cadillac ELR,1024,2015,PHEV
+BMW i3,11024,2015,EV
+Mercedes B-Class (B250e),1906,2015,EV
+BMW i8,2265,2015,PHEV
+VW e-Golf,4232,2015,EV
+Kia Soul EV,1015,2015,EV
+Porsche Cayenne S E-Hybrid,1163,2015,PHEV
+Mercedes S550 Plug,118,2015,PHEV
+Volvo-XC90 Plug In,86,2015,PHEV
+Tesla Model X,208,2015,EV
+BMW X5,892,2015,PHEV
+Hyundai Sonata Plug In,15,2015,PHEV
+Audi A3 Plug In,0,2015,PHEV
+BMW 3-series Plug-In,0,2015,PHEV
+Mercedes GLE 550e,0,2015,PHEV
+BMW 7-series Plug-in,0,2015,PHEV
+Mercedes C350We,0,2015,PHEV
+Chevy Bolt,0,2015,EV
+Kia Optima Plug-in,0,2015,PHEV
+Hyundai Ioniq EV,0,2015,EV
+Chrysler Pacifica Plug-in Hybrid,0,2015,PHEV
+Cadillac CT6,0,2015,PHEV
+BMW 5-Series Plug in,0,2015,PHEV
+MINI Countryman S E,0,2015,PHEV
+Porsche Panamera 4 E-H,0,2015,PHEV
+Tesla Model 3,0,2015,EV
+Honda Clarity BEV,0,2015,EV
+Volvo XC60 Plug In,0,2015,PHEV
+Volvo S90 Plug In,0,2015,PHEV
+Honda Clarity Plug-in,0,2015,PHEV
+Mitsubishi Outlander Plug In,0,2015,PHEV
+Hyundai Ioniq Plug-In,0,2015,PHEV
+Kia Niro Plug In,0,2015,PHEV
+Mercedes GLC 350e Hybrid,0,2015,PHEV
+Jaguar I-Pace,0,2015,EV
+Hyundai Kona Electric,0,2015,EV
+Subaru Crosstrek Hybrid,0,2015,PHEV
+Audi e-tron,0,2015,EV
+Kia Niro EV,0,2015,EV
+Chevy Volt,24739,2016,PHEV
+Nissan Leaf,14006,2016,EV
+Smart ED,657,2016,EV
+Mitsubishi I EV,94,2016,EV
+BMW Active E,0,2016,EV
+Prius PHEV,2474,2016,PHEV
+Ford Focus EV,901,2016,EV
+Honda Fit EV,0,2016,EV
+Tesla Model S,30200,2016,EV
+Toyota RAV4 EV,0,2016,EV
+Ford C-Max Energi,7957,2016,PHEV
+Honda Accord,0,2016,PHEV
+Ford Fusion Energi,15938,2016,PHEV
+Chevy Spark,3035,2016,EV
+Fiat 500E,3737,2016,EV
+Porsche Panamera S E-Hybrid,393,2016,PHEV
+Cadillac ELR,534,2016,PHEV
+BMW i3,7625,2016,EV
+Mercedes B-Class (B250e),632,2016,EV
+BMW i8,1594,2016,PHEV
+VW e-Golf,3937,2016,EV
+Kia Soul EV,1728,2016,EV
+Porsche Cayenne S E-Hybrid,2111,2016,PHEV
+Mercedes S550 Plug,550,2016,PHEV
+Volvo-XC90 Plug In,2015,2016,PHEV
+Tesla Model X,19600,2016,EV
+BMW X5,5995,2016,PHEV
+Hyundai Sonata Plug In,3000,2016,PHEV
+Audi A3 Plug In,4280,2016,PHEV
+BMW 3-series Plug-In,880,2016,PHEV
+Mercedes GLE 550e,231,2016,PHEV
+BMW 7-series Plug-in,23,2016,PHEV
+Mercedes C350We,171,2016,PHEV
+Chevy Bolt,579,2016,EV
+Kia Optima Plug-in,0,2016,PHEV
+Hyundai Ioniq EV,0,2016,EV
+Chrysler Pacifica Plug-in Hybrid,0,2016,PHEV
+Cadillac CT6,0,2016,PHEV
+BMW 5-Series Plug in,0,2016,PHEV
+MINI Countryman S E,0,2016,PHEV
+Porsche Panamera 4 E-H,0,2016,PHEV
+Tesla Model 3,0,2016,EV
+Honda Clarity BEV,0,2016,EV
+Volvo XC60 Plug In,0,2016,PHEV
+Volvo S90 Plug In,0,2016,PHEV
+Honda Clarity Plug-in,0,2016,PHEV
+Mitsubishi Outlander Plug In,0,2016,PHEV
+Hyundai Ioniq Plug-In,0,2016,PHEV
+Kia Niro Plug In,0,2016,PHEV
+Mercedes GLC 350e Hybrid,0,2016,PHEV
+Jaguar I-Pace,0,2016,EV
+Hyundai Kona Electric,0,2016,EV
+Subaru Crosstrek Hybrid,0,2016,PHEV
+Audi e-tron,0,2016,EV
+Kia Niro EV,0,2016,EV
+Chevy Volt,20349,2017,PHEV
+Nissan Leaf,11230,2017,EV
+Smart ED,544,2017,EV
+Mitsubishi I EV,6,2017,EV
+BMW Active E,0,2017,EV
+Prius PHEV,20936,2017,PHEV
+Ford Focus EV,1817,2017,EV
+Honda Fit EV,0,2017,EV
+Tesla Model S,26500,2017,EV
+Toyota RAV4 EV,0,2017,EV
+Ford C-Max Energi,8140,2017,PHEV
+Honda Accord,0,2017,PHEV
+Ford Fusion Energi,9632,2017,PHEV
+Chevy Spark,23,2017,EV
+Fiat 500E,3336,2017,EV
+Porsche Panamera S E-Hybrid,18,2017,PHEV
+Cadillac ELR,17,2017,PHEV
+BMW i3,6276,2017,EV
+Mercedes B-Class (B250e),744,2017,EV
+BMW i8,488,2017,PHEV
+VW e-Golf,3534,2017,EV
+Kia Soul EV,2157,2017,EV
+Porsche Cayenne S E-Hybrid,1574,2017,PHEV
+Mercedes S550 Plug,666,2017,PHEV
+Volvo-XC90 Plug In,2358,2017,PHEV
+Tesla Model X,21700,2017,EV
+BMW X5,5349,2017,PHEV
+Hyundai Sonata Plug In,2254,2017,PHEV
+Audi A3 Plug In,2877,2017,PHEV
+BMW 3-series Plug-In,4141,2017,PHEV
+Mercedes GLE 550e,463,2017,PHEV
+BMW 7-series Plug-in,707,2017,PHEV
+Mercedes C350We,817,2017,PHEV
+Chevy Bolt,23297,2017,EV
+Kia Optima Plug-in,1512,2017,PHEV
+Hyundai Ioniq EV,432,2017,EV
+Chrysler Pacifica Plug-in Hybrid,2981,2017,PHEV
+Cadillac CT6,205,2017,PHEV
+BMW 5-Series Plug in,3759,2017,PHEV
+MINI Countryman S E,475,2017,PHEV
+Porsche Panamera 4 E-H,0,2017,PHEV
+Tesla Model 3,1770,2017,EV
+Honda Clarity BEV,1126,2017,EV
+Volvo XC60 Plug In,356,2017,PHEV
+Volvo S90 Plug In,112,2017,PHEV
+Honda Clarity Plug-in,903,2017,PHEV
+Mitsubishi Outlander Plug In,0,2017,PHEV
+Hyundai Ioniq Plug-In,0,2017,PHEV
+Kia Niro Plug In,0,2017,PHEV
+Mercedes GLC 350e Hybrid,0,2017,PHEV
+Jaguar I-Pace,0,2017,EV
+Hyundai Kona Electric,0,2017,EV
+Subaru Crosstrek Hybrid,0,2017,PHEV
+Audi e-tron,0,2017,EV
+Kia Niro EV,0,2017,EV
+Chevy Volt,18306,2018,PHEV
+Nissan Leaf,14715,2018,EV
+Smart ED,1219,2018,EV
+Mitsubishi I EV,0,2018,EV
+BMW Active E,0,2018,EV
+Prius PHEV,27595,2018,PHEV
+Ford Focus EV,560,2018,EV
+Honda Fit EV,0,2018,EV
+Tesla Model S,25745,2018,EV
+Toyota RAV4 EV,0,2018,EV
+Ford C-Max Energi,582,2018,PHEV
+Honda Accord,0,2018,PHEV
+Ford Fusion Energi,8074,2018,PHEV
+Chevy Spark,7,2018,EV
+Fiat 500E,2250,2018,EV
+Porsche Panamera S E-Hybrid,2036,2018,PHEV
+Cadillac ELR,1,2018,PHEV
+BMW i3,6117,2018,EV
+Mercedes B-Class (B250e),135,2018,EV
+BMW i8,772,2018,PHEV
+VW e-Golf,1354,2018,EV
+Kia Soul EV,1134,2018,EV
+Porsche Cayenne S E-Hybrid,1022,2018,PHEV
+Mercedes S550 Plug,96,2018,PHEV
+Volvo-XC90 Plug In,1387,2018,PHEV
+Tesla Model X,26100,2018,EV
+BMW X5,4434,2018,PHEV
+Hyundai Sonata Plug In,460,2018,PHEV
+Audi A3 Plug In,2597,2018,PHEV
+BMW 3-series Plug-In,2600,2018,PHEV
+Mercedes GLE 550e,966,2018,PHEV
+BMW 7-series Plug-in,339,2018,PHEV
+Mercedes C350We,1721,2018,PHEV
+Chevy Bolt,18019,2018,EV
+Kia Optima Plug-in,965,2018,PHEV
+Hyundai Ioniq EV,345,2018,EV
+Chrysler Pacifica Plug-in Hybrid,7062,2018,PHEV
+Cadillac CT6,231,2018,PHEV
+BMW 5-Series Plug in,8664,2018,PHEV
+MINI Countryman S E,1564,2018,PHEV
+Porsche Panamera 4 E-H,0,2018,PHEV
+Tesla Model 3,139782,2018,EV
+Honda Clarity BEV,948,2018,EV
+Volvo XC60 Plug In,2267,2018,PHEV
+Volvo S90 Plug In,437,2018,PHEV
+Honda Clarity Plug-in,18602,2018,PHEV
+Mitsubishi Outlander Plug In,4166,2018,PHEV
+Hyundai Ioniq Plug-In,1590,2018,PHEV
+Kia Niro Plug In,3389,2018,PHEV
+Mercedes GLC 350e Hybrid,567,2018,PHEV
+Jaguar I-Pace,393,2018,EV
+Hyundai Kona Electric,0,2018,EV
+Subaru Crosstrek Hybrid,0,2018,PHEV
+Audi e-tron,0,2018,EV
+Kia Niro EV,0,2018,EV
+Chevy Volt,4915,2019,PHEV
+Nissan Leaf,12365,2019,EV
+Smart ED,680,2019,EV
+Mitsubishi I EV,0,2019,EV
+BMW Active E,0,2019,EV
+Prius PHEV,23630,2019,PHEV
+Ford Focus EV,0,2019,EV
+Honda Fit EV,0,2019,EV
+Tesla Model S,15090,2019,EV
+Toyota RAV4 EV,0,2019,EV
+Ford C-Max Energi,0,2019,PHEV
+Honda Accord,0,2019,PHEV
+Ford Fusion Energi,7476,2019,PHEV
+Chevy Spark,0,2019,EV
+Fiat 500E,632,2019,EV
+Porsche Panamera S E-Hybrid,1958,2019,PHEV
+Cadillac ELR,0,2019,PHEV
+BMW i3,4854,2019,EV
+Mercedes B-Class (B250e),9,2019,EV
+BMW i8,1102,2019,PHEV
+VW e-Golf,4863,2019,EV
+Kia Soul EV,114,2019,EV
+Porsche Cayenne S E-Hybrid,1140,2019,PHEV
+Mercedes S550 Plug,371,2019,PHEV
+Volvo-XC90 Plug In,1710,2019,PHEV
+Tesla Model X,19425,2019,EV
+BMW X5,167,2019,PHEV
+Hyundai Sonata Plug In,456,2019,PHEV
+Audi A3 Plug In,437,2019,PHEV
+BMW 3-series Plug-In,705,2019,PHEV
+Mercedes GLE 550e,1509,2019,PHEV
+BMW 7-series Plug-in,80,2019,PHEV
+Mercedes C350We,2172,2019,PHEV
+Chevy Bolt,16313,2019,EV
+Kia Optima Plug-in,350,2019,PHEV
+Hyundai Ioniq EV,739,2019,EV
+Chrysler Pacifica Plug-in Hybrid,5811,2019,PHEV
+Cadillac CT6,25,2019,PHEV
+BMW 5-Series Plug in,5442,2019,PHEV
+MINI Countryman S E,494,2019,PHEV
+Porsche Panamera 4 E-H,0,2019,PHEV
+Tesla Model 3,154840,2019,EV
+Honda Clarity BEV,742,2019,EV
+Volvo XC60 Plug In,1682,2019,PHEV
+Volvo S90 Plug In,407,2019,PHEV
+Honda Clarity Plug-in,10728,2019,PHEV
+Mitsubishi Outlander Plug In,2810,2019,PHEV
+Hyundai Ioniq Plug-In,1765,2019,PHEV
+Kia Niro Plug In,4051,2019,PHEV
+Mercedes GLC 350e Hybrid,2459,2019,PHEV
+Jaguar I-Pace,2594,2019,EV
+Hyundai Kona Electric,1721,2019,EV
+Subaru Crosstrek Hybrid,880,2019,PHEV
+Audi e-tron,5369,2019,EV
+Kia Niro EV,1562,2019,EV
