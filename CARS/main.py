@@ -6,6 +6,7 @@ import seaborn as sns
 from sklearn.metrics import mean_squared_error
 import warnings
 
+# Each model I test throws 6 warnings, due to datatype and some early indexing issues. I test 64 models so this adds up
 warnings.filterwarnings("ignore")
 
 # Sets Pandas options to view the whole dataframe
@@ -61,10 +62,7 @@ def format_and_summarize(df):
 
 
 def create_model_maker(min, max):
-    """ Creates a multi nested list for use in ARIMA estimation Models
-        Min: int, minimum value for model
-        Max: int, maximum value for model
-    """
+    # Creates a multi nested list for use in ARIMA estimation Models
     m_list = []
     for a in range(min, max + 1):
         for b in range(min, max + 1):
@@ -74,11 +72,11 @@ def create_model_maker(min, max):
 
 
 def test_models(model_list, train, test):
-    """ Runs all possible models from model_list.  Scores them on RMSE, and sorts to identify the best model for data
-    :param model_list: a custom nested list full of models. Created from create_model_maker()
-    :param train: Training dataset, index and values
-    :param test: Scoring dataset, index and values
-    """
+    # Runs all possible models from model_list.  Scores them on RMSE, and sorts to identify the best model for data
+    # model_list: a custom nested list full of models. Created from create_model_maker()
+    # train: Training dataset, index and values
+    # test: Scoring dataset, index and values
+
     for model in range(len(model_list)):
         aa = model_list[model][1][0]
         bb = model_list[model][1][1]
@@ -99,7 +97,7 @@ def test_models(model_list, train, test):
 
 
 def test_train_date(df, date):
-    """Creates training and testing datasets for ARIMA Estimator Model"""
+    # Creates training and testing datasets for ARIMA Estimator Model"""
     train = df[df.index <= date]
     test = df[df.index > date]
     return train, test
@@ -119,8 +117,8 @@ def print_base_graph(df, filt):
 
 
 def add_2022(df):
-    """# Creates and adds the 2022 year to the Dataframe.
-    0's are reported as these are the values we will be estimating with our newly found optimal model"""
+    # Creates and adds the 2022 year to the Dataframe.
+    # 0's are reported as these are the values we will be estimating with our newly found optimal model
     df2 = pd.DataFrame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], columns=['Chargepoints'],
                        index=['2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07', '2022-08',
                               '2022-09', '2022-10', '2022-10', '2022-12'])
@@ -129,9 +127,13 @@ def add_2022(df):
 
 
 def final_graph(train, model_lst, state_filter):
+    # Creates final Graph with optimal model
+
+    # Inputs optimal ARIMA model and fits it to the data
     ARIMAmodel = ARIMA(train['Chargepoints'], order=(model_lst[0][1][0], model_lst[0][1][1], model_lst[0][1][2]))
     ARIMAmodel = ARIMAmodel.fit()
 
+    # The guts of the procedure. Applys model with confidence level of .05,
     y_pred = ARIMAmodel.get_forecast(len(test.index))
     y_pred_df = y_pred.conf_int(alpha=0.05)
     y_pred_df["Predictions"] = ARIMAmodel.predict(start=y_pred_df.index[0], end=y_pred_df.index[-1])
@@ -157,13 +159,13 @@ def final_graph(train, model_lst, state_filter):
 Stations = read_n_clean_1("alt_fuel_stations (Dec 7 2021).csv")
 Stations = read_n_clean_2(Stations)
 
-state_filter = 'ID'
+state_filter = 'CA'
 EV_chargingpoints = Stations[Stations['State'] == state_filter]
 EV_chargingpoints = format_and_summarize(EV_chargingpoints)
 
 """----Start Graph 1----"""
 
-print_base_graph(EV_chargingpoints, 'State of MA')
+print_base_graph(EV_chargingpoints, 'State of ' + state_filter)
 
 """----Creation & Curation of ARIMA Models----"""
 # Creation of Test and Train Datasets,
