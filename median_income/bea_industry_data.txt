@@ -1,0 +1,52 @@
+State	Largest Industry	Largest Industry Monetary Contribution (USD, in millions)	Largest Industry GDP %	5-Year Change in % of Largest Industry
+Alabama	Manufacturing	35558.5	16.80%	5.77%
+Alaska	Government and government enterprises	10685.8	20.67%	5.87%
+Arizona	Real estate	45443.6	13.92%	21.83%
+Arkansas	Manufacturing	18407.2	14.88%	10.40%
+California	Real estate	445182.1	15.84%	29.12%
+Colorado	Professional and business services	51277	14.77%	23.25%
+Connecticut	Finance and insurance	35191.1	13.25%	10.17%
+Delaware	Finance and insurance	22467.2	31.13%	50.21%
+D.C.	Real estate	445182.1	15.84%	23.66%
+Florida	Real estate	148083.4	15.12%	23.84%
+Georgia	Trade	74592.3	13.27%	18.06%
+Hawaii	Government and government enterprises	17808.3	20.00%	10.08%
+Idaho	Trade	10277.3	14.19%	20.35%
+Illinois	Professional and business services	113856.3	13.79%	15.04%
+Indiana	Manufacturing	96344.9	27.44%	9.88%
+Iowa	Manufacturing	33058.1	18.07%	12.50%
+Kansas	Manufacturing	25185.1	15.73%	29.78%
+Kentucky	Manufacturing	36594.2	18.21%	5.56%
+Louisiana	Manufacturing	43687.3	18.35%	-2.84%
+Maine	Government and government enterprises	8635.9	13.99%	14.85%
+Maryland	Government and government enterprises	80235.2	20.14%	11.93%
+Massachusetts	Professional and business services	94480.5	17.47%	26.06%
+Michigan	Manufacturing	95936.5	18.97%	13.99%
+Minnesota	Manufacturing	49659	14.10%	12.75%
+Mississippi	Government and government enterprises	19221.5	17.49%	8.09%
+Missouri	Professional and business services	39825.5	13.10%	17.40%
+Montana	Government and government enterprises	7241.1	15.38%	12.79%
+Nebraska	Government and government enterprises	15224.3	12.84%	15.68%
+Nevada	Real estate	19785.8	12.60%	31.19%
+New Hampshire	Real estate	11117.3	13.69%	13.88%
+New Jersey	Real estate	94434	15.76%	9.81%
+New Mexico	Government and government enterprises	22468.4	23.84%	5.40%
+New York	Finance and insurance	302116.8	18.90%	27.10%
+North Carolina	Manufacturing	97771.5	18.18%	6.73%
+North Dakota	Trade	7492.9	14.52%	-2.54%
+Ohio	Manufacturing	104554.9	16.19%	11.05%
+Oklahoma	Government and government enterprises	29584.7	15.79%	7.62%
+Oregon	Real estate	32271	14.28%	29.74%
+Pennsylvania	Professional and business services	98019.2	13.03%	15.23%
+Rhode Island	Real estate	8191.2	13.82%	8.24%
+South Carolina	Manufacturing	36473.8	16.44%	23.10%
+South Dakota	Finance and insurance	7937.5	16.00%	20.99%
+Tennessee	Manufacturing	53760.3	15.46%	16.21%
+Texas	Trade	228242.5	13.80%	13.24%
+Utah	Government and government enterprises	20667.6	12.47%	16.94%
+Vermont	Government and government enterprises	4698.1	14.40%	9.18%
+Virginia	Professional and business services	96970.1	19.00%	11.93%
+Washington	Trade	70855.6	13.56%	35.71%
+West Virginia	Government and government enterprises	11811.2	16.16%	1.69%
+Wisconsin	Manufacturing	59199.2	18.41%	5.94%
+Wyoming	Natural resources and mining	8012.3	21.30%	-26.65%
