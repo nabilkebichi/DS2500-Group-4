@@ -6,122 +6,180 @@ import seaborn as sns
 from sklearn.metrics import mean_squared_error
 import warnings
 
+warnings.filterwarnings("ignore")
+
 # Sets Pandas options to view the whole dataframe
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-# Import Data, and drop most columns.  All we want is the dates, and to make sure it's an EV station
-Stations = pd.read_csv("alt_fuel_stations (Dec 7 2021).csv", encoding='utf-8')
-Stations = Stations.drop(
-    columns=['Street Address', 'Intersection Directions', 'City', 'ZIP', 'Plus4', 'Station Phone', 'Status Code',
-             'Groups With Access Code', 'Access Days Time', 'Cards Accepted', 'BD Blends', 'NG Fill Type Code',
-             'NG PSI', 'Geocode Status', 'Latitude', 'Longitude', 'ID', 'Updated At', 'Owner Type Code',
-             'Federal Agency ID', 'Federal Agency Name', 'Hydrogen Status Link', 'NG Vehicle Class', 'LPG Primary',
-             'E85 Blender Pump', 'Intersection Directions (French)', 'Access Days Time (French)', 'BD Blends (French)',
-             'Groups With Access Code (French)', 'Hydrogen Is Retail', 'Access Detail Code',
-             'Federal Agency Code', 'EV Pricing (French)', 'LPG Nozzle Types', 'Hydrogen Pressures',
-             'Hydrogen Standards', 'CNG Fill Type Code', 'CNG PSI', 'CNG Vehicle Class', 'LNG Vehicle Class',
-             'EV On-Site Renewable Source', 'Restricted Access', 'CNG Dispenser Num', 'CNG On-Site Renewable Source',
-             'CNG Total Compression Capacity', 'CNG Storage Capacity', 'LNG On-Site Renewable Source',
-             'E85 Other Ethanol Blends'])
 
-Stations = Stations.drop(
-    columns=['Station Name', 'Expected Date', 'EV Level1 EVSE Num', 'EV Level2 EVSE Num',
-             'EV DC Fast Count', 'EV Other Info', 'EV Network', 'EV Network Web', 'Date Last Confirmed',
-             'EV Connector Types', 'Facility Type', 'EV Pricing'])
+def read_n_clean_1(location):
+    # Import Data, and drop most columns
+    df = pd.read_csv(location, encoding='utf-8')
+    df = df.drop(
+        columns=['Street Address', 'Intersection Directions', 'City', 'ZIP', 'Plus4', 'Station Phone', 'Status Code',
+                 'Groups With Access Code', 'Access Days Time', 'Cards Accepted', 'BD Blends', 'NG Fill Type Code',
+                 'NG PSI', 'Geocode Status', 'Latitude', 'Longitude', 'ID', 'Updated At', 'Owner Type Code',
+                 'Federal Agency ID', 'Federal Agency Name', 'Hydrogen Status Link', 'NG Vehicle Class', 'LPG Primary',
+                 'E85 Blender Pump', 'Intersection Directions (French)', 'Access Days Time (French)',
+                 'BD Blends (French)',
+                 'Groups With Access Code (French)', 'Hydrogen Is Retail', 'Access Detail Code',
+                 'Federal Agency Code', 'EV Pricing (French)', 'LPG Nozzle Types', 'Hydrogen Pressures',
+                 'Hydrogen Standards', 'CNG Fill Type Code', 'CNG PSI', 'CNG Vehicle Class', 'LNG Vehicle Class',
+                 'EV On-Site Renewable Source', 'Restricted Access', 'CNG Dispenser Num',
+                 'CNG On-Site Renewable Source',
+                 'CNG Total Compression Capacity', 'CNG Storage Capacity', 'LNG On-Site Renewable Source',
+                 'E85 Other Ethanol Blends'])
+    return df
 
-# Some basic filtering. We only want US data, public access ports, and obviously EV stations. Optional filter for state
-EV_chargingpoints = Stations[Stations["Fuel Type Code"] == "ELEC"]
-EV_chargingpoints = EV_chargingpoints[EV_chargingpoints['Country'] == 'US']
-EV_chargingpoints = EV_chargingpoints[EV_chargingpoints['Access Code'] == 'public']
-# EV_chargingpoints = EV_chargingpoints[EV_chargingpoints['State'] == 'CA']
 
-# Convert Station open date to a Year-Month string, and creates new column Year-Month
-EV_chargingpoints['Open Date'] = pd.to_datetime(EV_chargingpoints['Open Date'], format='%Y-%m-%d')
-EV_chargingpoints['Year-Month'] = EV_chargingpoints['Open Date'].dt.strftime('%Y-%m')
+def read_n_clean_2(df):
+    # Some basic filtering. We only want US data, public access ports, and obviously EV stations. Optional filter for
+    # state
+    df = df.drop(
+        columns=['Station Name', 'Expected Date', 'EV Level1 EVSE Num', 'EV Level2 EVSE Num',
+                 'EV DC Fast Count', 'EV Other Info', 'EV Network', 'EV Network Web', 'Date Last Confirmed',
+                 'EV Connector Types', 'Facility Type', 'EV Pricing'])
 
-# Drops other last set of filter columns. We are just left with Year-Month, also adds Chargepoints, the column we
-# will sum() on when we group by Year-Month
-EV_chargingpoints = EV_chargingpoints.drop(columns=['Fuel Type Code', 'Open Date', 'Country', 'Access Code', 'State'])
-EV_chargingpoints['Chargepoints'] = 1
-EV_chargingpoints = EV_chargingpoints.groupby(['Year-Month']).sum()
+    df = df[df["Fuel Type Code"] == "ELEC"]
+    df = df[df['Country'] == 'US']
+    df = df[df['Access Code'] == 'public']
+    return df
 
-# Drops this random future chargepoint.  Data quality for this analysis isn't great
-EV_chargingpoints = EV_chargingpoints.drop(labels=['2022-06'], axis=0)
 
-# Creates and adds the 2022 year to the Dataframe.  0's are reported as these are the values we will be modeling
-EV_2022 = pd.DataFrame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], columns=['Chargepoints'],
+def format_and_summarize(df):
+    # Convert Station open date to a Year-Month string, and creates new column Year-Month
+    df['Open Date'] = pd.to_datetime(df['Open Date'], format='%Y-%m-%d')
+    df['Year-Month'] = df['Open Date'].dt.strftime('%Y-%m')
+
+    # Drops other last set of filter columns. We are just left with Year-Month, also adds Chargepoints, the column we
+    # will sum() on when we group by Year-Month
+    df = df.drop(columns=['Fuel Type Code', 'Open Date', 'Country', 'Access Code', 'State'])
+    df['Chargepoints'] = 1
+    df = df.groupby(['Year-Month']).sum()
+    return df
+
+
+def create_model_maker(min, max):
+    """ Creates a multi nested list for use in ARIMA estimation Models
+        Min: int, minimum value for model
+        Max: int, maximum value for model
+    """
+    m_list = []
+    for a in range(min, max + 1):
+        for b in range(min, max + 1):
+            for c in range(min, max + 1):
+                m_list.append([0, [a, b, c]])
+    return m_list
+
+
+def test_models(model_list, train, test):
+    """ Runs all possible models from model_list.  Scores them on RMSE, and sorts to identify the best model for data
+    :param model_list: a custom nested list full of models. Created from create_model_maker()
+    :param train: Training dataset, index and values
+    :param test: Scoring dataset, index and values
+    """
+    for model in range(len(model_list)):
+        aa = model_list[model][1][0]
+        bb = model_list[model][1][1]
+        cc = model_list[model][1][2]
+
+        ARIMAmodel = ARIMA(train['Chargepoints'], order=(aa, bb, cc))
+        ARIMAmodel = ARIMAmodel.fit()
+        y_pred = ARIMAmodel.get_forecast(len(test.index))
+        y_pred_df = y_pred.conf_int(alpha=0.05)
+        y_pred_df["Predictions"] = ARIMAmodel.predict(start=y_pred_df.index[0], end=y_pred_df.index[-1])
+        y_pred_df.index = test.index
+        arma_rmse = np.sqrt(mean_squared_error(test["Chargepoints"].values, y_pred_df["Predictions"]))
+        model_list[model][0] = arma_rmse
+        print(model_list[model])
+        print('Running ARIMA Model # ', model + 1, 'of ', len(model_list))
+    model_list.sort(key=lambda x: x[0], reverse=False)
+    return model_list
+
+
+def test_train_date(df, date):
+    """Creates training and testing datasets for ARIMA Estimator Model"""
+    train = df[df.index <= date]
+    test = df[df.index > date]
+    return train, test
+
+
+def print_base_graph(df, filt):
+    # Set standards for the first plt.plot(), the reflection of all data
+    sns.set()
+    plt.tick_params(labelbottom=False, bottom=False)
+    plt.xlabel('1995 - 2021 (Monthly)')
+    plt.ylabel('EV Stations Opened each Month')
+    plt.title("EV Charging Station Growth -> Filters: " + filt)
+
+    # Plots and Shows the charging station built per month over time
+    plt.plot(df.index, df['Chargepoints'])
+    plt.show()
+
+
+def add_2022(df):
+    """# Creates and adds the 2022 year to the Dataframe.
+    0's are reported as these are the values we will be estimating with our newly found optimal model"""
+    df2 = pd.DataFrame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], columns=['Chargepoints'],
                        index=['2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07', '2022-08',
                               '2022-09', '2022-10', '2022-10', '2022-12'])
-EV_chargingpoints = EV_chargingpoints.append(EV_2022)
+    df = df.append(df2)
+    return df
 
-# Set standards for the first plt.plot(), the reflection of all data
-sns.set()
-plt.tick_params(labelbottom=False, bottom=False)
-plt.xlabel('1995 - 2022 (Monthly)')
-plt.ylabel('EV Stations Opened')
-plt.title("EV Charging Station Growth")
 
-# Plots and Shows the charging station built per month over time
-plt.plot(EV_chargingpoints.index, EV_chargingpoints['Chargepoints'], )
-plt.show()
+def final_graph(train, model_lst, state_filter):
+    ARIMAmodel = ARIMA(train['Chargepoints'], order=(model_lst[0][1][0], model_lst[0][1][1], model_lst[0][1][2]))
+    ARIMAmodel = ARIMAmodel.fit()
 
-# Creates training and testing datasets for ARIMA Estimator Model
-train = EV_chargingpoints[EV_chargingpoints.index <= '2020-01']
-test = EV_chargingpoints[EV_chargingpoints.index > '2020-01']
+    y_pred = ARIMAmodel.get_forecast(len(test.index))
+    y_pred_df = y_pred.conf_int(alpha=0.05)
+    y_pred_df["Predictions"] = ARIMAmodel.predict(start=y_pred_df.index[0], end=y_pred_df.index[-1])
+    y_pred_df.index = test.index
+    y_pred_out = y_pred_df["Predictions"]
 
-# Creates and fits ARIMA Model. Some other models we found that worked were,(2, 2, 1), (8, 3, 3).  Slight changes to
-# the data drastically affect the consistency of the ARIMA Model
-y = train['Chargepoints']
-ARIMAmodel = ARIMA(y, order=(8, 3, 2))
-# ARIMAmodel = ARIMA(y, order = (2, 2, 1))
-# ARIMAmodel = ARIMA(y, order = (8, 3, 3))
-# ARIMAmodel = ARIMA(y, order=(2, 3, 1))
-# ARIMAmodel = ARIMA(y, order=(4, 3, 1))
+    # Set standards for the second plt.plot(), with 3 different data sets, the Train, Test, and Estimate
+    sns.set()
+    plt.tick_params(labelbottom=False, bottom=False)
+    plt.xlabel('1995 - 2022 (Monthly)')
+    plt.ylabel('EV Stations Opened Each Month')
+    plt.title("ARIMA Model Estimates for " + state_filter)
 
-ARIMAmodel = ARIMAmodel.fit()
+    # Plots and shows the 3 data sets, the Train, Test, and Estimate
+    plt.plot(train, color="black", label='1995-2020 Data (Train)')
+    plt.plot(test, color="red", label='2020-2020 Data (Test)')
+    plt.plot(y_pred_out, color='Green', label='ARIMA Estimate ' + str(omni[0][1]))
+    plt.legend()
+    plt.show()
 
-"""
-ARIMA Model code source: https://builtin.com/data-science/time-series-forecasting-python
-and https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/
-"""
 
-# Long story short, creates the model, sets the confidence level, and then runs the model off of the DF index
-# Creates y_pred_out which are the Model's predictions, to be graphed
-y_pred = ARIMAmodel.get_forecast(len(test.index))
-y_pred_df = y_pred.conf_int(alpha=0.05)
-y_pred_df["Predictions"] = ARIMAmodel.predict(start=y_pred_df.index[0], end=y_pred_df.index[-1])
-y_pred_df.index = test.index
-y_pred_out = y_pred_df["Predictions"]
+"""----Intro Data----"""
+Stations = read_n_clean_1("alt_fuel_stations (Dec 7 2021).csv")
+Stations = read_n_clean_2(Stations)
 
-"""
-This can be seen graphically, but our model predicts EV station creation at the rate of 
-479 - 627 per month for 2020
-592 - 786 per month for 2021
-801 - 974 per month for 2022
+state_filter = 'ID'
+EV_chargingpoints = Stations[Stations['State'] == state_filter]
+EV_chargingpoints = format_and_summarize(EV_chargingpoints)
 
-via print(y_pred_out)
-"""
+"""----Start Graph 1----"""
 
-# Set standards for the second plt.plot(), with 3 different data sets, the Train, Test, and Estimate
-sns.set()
-plt.tick_params(labelbottom=False, bottom=False)
-plt.xlabel('1995 - 2022 (Monthly)')
-plt.ylabel('EV Stations Opened')
-plt.title("Train/Test split for Charging data")
+print_base_graph(EV_chargingpoints, 'State of MA')
 
-# Plots and shows the 3 data sets, the Train, Test, and Estimate
-plt.plot(train, color="black", label='1995-2020 Data (Train)')
-plt.plot(test, color="red", label='2020-2020 Data (Test)')
-plt.plot(y_pred_out, color='Green', label='ARIMA Estimate (8, 3, 2)')
-plt.legend()
+"""----Creation & Curation of ARIMA Models----"""
+# Creation of Test and Train Datasets,
+train, test = test_train_date(EV_chargingpoints, '2020-01')
 
-plt.show()
+# Creation of the model training list
+omni = create_model_maker(0, 3)
 
-# For model evaluation, we used a combination of visual and numerical process, relying on our graph and the RMSE of
-# the produced model, working to create a model that was both graphically and statistically relevant
-arma_rmse = np.sqrt(mean_squared_error(test["Chargepoints"].values, y_pred_df["Predictions"]))
-print("RMSE: ", arma_rmse)
+# Run models in list and discover the best model, via RSME
+omni = test_models(omni, train, test)
 
-# This will create index warnings however the code runs smoothly. It is simply from the adaptations I made from the
-# source.  Our data is formatted quite differently and the source doesn't have groups or summarized data. Thanks!
+"""----Start Graph 2----"""
+# Adds in 2022 blanks for model to estimate
+EV_chargingpoints = add_2022(EV_chargingpoints)
+
+# re-creates training and testing datasets for ARIMA Estimator Model, now with 2022 blanks
+train, test = test_train_date(EV_chargingpoints, '2020-01')
+
+final_graph(train, omni, state_filter)
