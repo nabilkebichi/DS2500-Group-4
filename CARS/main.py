@@ -145,11 +145,11 @@ def final_graph(train, model_lst, state_filter):
     plt.tick_params(labelbottom=False, bottom=False)
     plt.xlabel('1995 - 2022 (Monthly)')
     plt.ylabel('EV Stations Opened Each Month')
-    plt.title("ARIMA Model Estimates for " + state_filter)
+    plt.title("ARIMA Model Estimates for Charging Station Growth in " + state_filter)
 
     # Plots and shows the 3 data sets, the Train, Test, and Estimate
     plt.plot(train, color="black", label='1995-2020 Data (Train)')
-    plt.plot(test, color="red", label='2020-2020 Data (Test)')
+    plt.plot(test, color="red", label='2020-2021 Data (Test)')
     plt.plot(y_pred_out, color='Green', label='ARIMA Estimate ' + str(omni[0][1]))
     plt.legend()
     plt.show()
@@ -159,7 +159,7 @@ def final_graph(train, model_lst, state_filter):
 Stations = read_n_clean_1("alt_fuel_stations (Dec 7 2021).csv")
 Stations = read_n_clean_2(Stations)
 
-state_filter = 'CA'
+state_filter = 'CO'
 EV_chargingpoints = Stations[Stations['State'] == state_filter]
 EV_chargingpoints = format_and_summarize(EV_chargingpoints)
 
